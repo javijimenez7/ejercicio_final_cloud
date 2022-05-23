@@ -1,6 +1,6 @@
 # EJERCICIO FINAL CLOUD
 
-Este ejercicio servirá para aplicar los conocimientos adquiridos en la formación para realizar una aplicación que simule una agencia de autobuses
+Este ejercicio servirá para aplicar los conocimientos adquiridos en la formación para realizar una aplicación que simule una agencia de autobuses.
 
 - Descripcion
 - Tecnologias utilizadas
