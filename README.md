@@ -81,7 +81,7 @@ Una vez descargado, procederemos a probar la aplicación con Postman con una col
   - (GET) http://localhost:8080/v0-empresa/mail/MAIL0002 : email filtrado por id
 
 * Trip
-  - (POST) http://localhost:8080/v0-empresa/trip : lista con todos los trips
-  - (GET) http://localhost:8080/v0-empresa/trip/TRIP0001 : trip filtrado por id
+  - (POST) http://localhost:8080/v0-empresa/trip : crea el trip
+  - (GET) http://localhost:8080/v0-empresa/trip : lista con todos los trips
   - (UPDATE) http://localhost:8080/v0-empresa/trip: modifica un trip(si pones issue a false se cancelan todas las reservas de ese trip)
   - (DELETE) http://localhost:8080/v0-empresa/trip : elimina el trip
