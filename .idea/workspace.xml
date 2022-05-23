@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d2ec7fc-cda1-4a7a-bdb5-36611c0a93a8" name="Changes" comment="" />
+    <list default="true" id="1d2ec7fc-cda1-4a7a-bdb5-36611c0a93a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -25,21 +31,26 @@
       <recent name="C:\Users\javier.jimenez\Desktop\concurso" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Docker-compose.yml: Compose Deployment">
-    <configuration name="Docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="Docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Docker.Docker-compose.yml.backempresa: Compose Deployment">
     <configuration name="Docker-compose.yml.backempresa: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
               <option value="backempresa" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Docker-compose.yml.backweb1: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="backweb1" />
             </list>
           </option>
           <option name="sourceFilePath" value="Docker-compose.yml" />
@@ -88,8 +99,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.Docker-compose.yml.backempresa: Compose Deployment" />
+        <item itemvalue="Docker.Docker-compose.yml.backweb1: Compose Deployment" />
         <item itemvalue="Docker.Docker-compose.yml.backweb: Compose Deployment" />
         <item itemvalue="Docker.Docker-compose.yml.kafka1: Compose Deployment" />
         <item itemvalue="Docker.Docker-compose.yml.zookeeper1: Compose Deployment" />
