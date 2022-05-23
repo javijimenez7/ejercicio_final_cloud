@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1d2ec7fc-cda1-4a7a-bdb5-36611c0a93a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +115,36 @@
       <option name="presentableId" value="Default" />
       <updated>1652872272897</updated>
     </task>
+    <task id="LOCAL-00001" summary="Endpoint postman">
+      <created>1653299098921</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653299098921</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Endpoint postman">
+      <created>1653299147877</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653299147877</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Endpoint postman" />
+    <option name="LAST_COMMIT_MESSAGE" value="Endpoint postman" />
   </component>
 </project>
