@@ -36,7 +36,29 @@ docker-compose up -d
 
 Una vez descargado, procederemos a probar la aplicación con Postman con una colección de endpoints que se encuentran en el fuente de la aplicación.
 
+  
+### BackWeb
+
+#### Sin autenticación
+* Token
+  - (POST) http://localhost:8090/v0-empresa/token : genera el token del administrador
+  - (POST) http://localhost:8080/v0/login : genera el token para el usuario que intenta loguearse
+  - (GET)  http://localhost:8080/v0-empresa/token/{token} verifica el token dado por parámetro
+
+* Trip
+  - (GET) http://localhost:8080/v0/trip/{id} : filtra trip por id
+  - (GET) http://localhost:8080/v0/trip/details?departure=JAEN&arrival=MALAGA&date=2022-04-09T20:30:00.000Z : filtra trip por salida y llegada
+  - (GET) http://localhost:8080/v0/trip/disponible/GRANADA : asientos disponibles para un destino
+
+#### Con autenticación
+(Es necesario indicar el token generado en el endpoint del usuario logueado en los parámetros)
+* Trip
+  - (POST) http://localhost:8080/v0/reserva : crea una reserva para el usuario logueado
+  - (GET)  http://localhost:8080/v0/reserva/RESERVA0001 : muestra la reserva filtrada por id
+  - (DELETE) http://localhost:8080/v0/reserva/RESERVA0001 : elimina la reserva filtrada por id
+
 ### BackEmpresa
+(Es necesario indicar el token generado en el endpoint del administrador en los parámetros)
 * Reserva
   - (GET) http://localhost:8090/v0-empresa/reserva : lista con todas las reservas realizadas
 
@@ -53,23 +75,3 @@ Una vez descargado, procederemos a probar la aplicación con Postman con una col
   - (GET) http://localhost:8080/v0-empresa/trip/TRIP0001 : trip filtrado por id
   - (UPDATE) http://localhost:8080/v0-empresa/trip: modifica un trip
   - (DELETE) http://localhost:8080/v0-empresa/trip : elimina el trip
-  
-### BackWeb
-
-#### Sin autenticación
-* Token
-  - (POST) http://localhost:8090/v0-empresa/token : genera el token del administrador
-  - (POST) http://localhost:8080/v0/login : genera el token para el usuario que intenta loguearse
-  - (GET)  http://localhost:8080/v0-empresa/token/{token} verifica el token dado por parámetro
-
-* Trip
-  - (GET) http://localhost:8080/v0/trip/{id} : filtra trip por id
-  - (GET) http://localhost:8080/v0/trip/details?departure=JAEN&arrival=MALAGA&date=2022-04-09T20:30:00.000Z : filtra trip por salida y llegada
-  - (GET) http://localhost:8080/v0/trip/disponible/GRANADA : asientos disponibles para un destino
-
-#### Con autenticación
-
-* Trip
-  - (POST) http://localhost:8080/v0/reserva : crea una reserva para el usuario logueado
-  - (GET)  http://localhost:8080/v0/reserva/RESERVA0001 : muestra la reserva filtrada por id
-  - (DELETE) http://localhost:8080/v0/reserva/RESERVA0001 : elimina la reserva filtrada por id
