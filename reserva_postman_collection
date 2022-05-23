@@ -1,0 +1,637 @@
+{
+	"info": {
+		"_postman_id": "0f4117ce-7501-4171-afb6-259b27a0b632",
+		"name": "Reservas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20368471"
+	},
+	"item": [
+		{
+			"name": "Web (SIN AUTENTICACION)",
+			"item": [
+				{
+					"name": "Token",
+					"item": [
+						{
+							"name": "Token Admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "email",
+										"value": "administrador@administrador.com",
+										"type": "default"
+									},
+									{
+										"key": "password",
+										"value": "1234",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8080/v0-empresa/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0-empresa",
+										"token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Token User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "email",
+										"value": "pablo74gndNF8snffA3n3A@gmail.com",
+										"type": "default"
+									},
+									{
+										"key": "password",
+										"value": "1234",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/v0/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verifica Token",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v0-empresa/token/Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI4NDYyMDhhMy0zMThlLTRjYmQtYTRjMi04OGJmYTMwNjQxYTgiLCJzdWIiOiJhZG1pbmlzdHJhZG9yQGFkbWluaXN0cmFkb3IuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE2NTI3ODMzNjYsImV4cCI6MTY1Mjc4Njk2Nn0.XHlmrK7wg6Ic6ugDKKyCOXFNE-MTVfxSKVrPKnrtKsvALbjT59Dpl9oaZngkCycdLkdR-YXEmBRvfjbuxCcJIw",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0-empresa",
+										"token",
+										"Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI4NDYyMDhhMy0zMThlLTRjYmQtYTRjMi04OGJmYTMwNjQxYTgiLCJzdWIiOiJhZG1pbmlzdHJhZG9yQGFkbWluaXN0cmFkb3IuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE2NTI3ODMzNjYsImV4cCI6MTY1Mjc4Njk2Nn0.XHlmrK7wg6Ic6ugDKKyCOXFNE-MTVfxSKVrPKnrtKsvALbjT59Dpl9oaZngkCycdLkdR-YXEmBRvfjbuxCcJIw"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trip",
+					"item": [
+						{
+							"name": "GET trip BY ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI3N2UxZDMxMy0yNDNmLTQyYjUtOTE2OS02NTg5OTEwMjM4YzEiLCJzdWIiOiJwYWJsZmRhc2RkZ2RmYWhAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiVVNFUiJdLCJpYXQiOjE2NDk2NzA4NjUsImV4cCI6MTY0OTY3NDQ2NX0.8rl_zTrVFiMrIgiwSryemzWySlRXMEMpzmi0NC9B_Wdvyph-AySzzsGCgTUTzh1YuHnxPuWsotWqaGrFkAz-Kw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/v0/trip/e40ed3b5-878f-4705-95b2-053958506ced",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0",
+										"trip",
+										"e40ed3b5-878f-4705-95b2-053958506ced"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET trip DepartureAndArrivalAndDate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v0/trip/details?departure=BILB&arrival=BCN SANTS&date=2022-04-02T20:30:00.000Z",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0",
+										"trip",
+										"details"
+									],
+									"query": [
+										{
+											"key": "departure",
+											"value": "BILB"
+										},
+										{
+											"key": "arrival",
+											"value": "BCN SANTS"
+										},
+										{
+											"key": "date",
+											"value": "2022-04-02T20:30:00.000Z"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET trip plazasDisponibles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/v0/trip/disponible",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0",
+										"trip",
+										"disponible"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Web USER",
+			"item": [
+				{
+					"name": "Reserva",
+					"item": [
+						{
+							"name": "CREATE reserva",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI0NDZjZTdmNy1iZDljLTQ2ZDAtYTZmNy0zYjQwYTg4NjE5ZDQiLCJzdWIiOiJwYWJsbzc0Z25kTkY4c25mZkEzbjNBQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlVTRVIiXSwiaWF0IjoxNjQ5NzQ4MDAxLCJleHAiOjE2NDk3NTE2MDF9.P5sb_YpaursAo9cjl9hicAS7qA015jHPue1Fh0poYB5nODkkQay65sxGW1ynRLdXPkq5DsFXAFGf7Edk-kMJ2g",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"details\": \"hola\",\r\n    \"idClient\": \"446ce7f7-bd9c-46d0-a6f7-3b40a88619d4\",\r\n    \"idTrip\": \"f79e0707-52a2-4818-a67f-3abb466eb17d\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v0/ticket",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0",
+										"ticket"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET reserva BY ID",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJkMDgyMTEwNy0zMjY5LTQzNWItYTkyZi0wYjBiOWVlZDU2NzQiLCJzdWIiOiJqYXZpamQyM0BnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjUyNjk4NTE4LCJleHAiOjE2NTI3MDIxMTh9.-biVlJ7x6T_jGL5cH_AiUOQwUwJA4YBtoQHLGbMB3yI2_2xGaB5U3snWgsYOEywEhzLFOKvM-dwnCtYMc1w7sQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwN2QzOWQzYy05OTQ5LTRlMWEtYmM4Ny0wNzY5MjYyZjE1YjciLCJzdWIiOiJhZG1pbkBhZG1pbmJ1cy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY0OTc0Nzk2NSwiZXhwIjoxNjQ5NzUxNTY1fQ.-ux41A_BKfO11iTw_Hd3eAm5lV8rTaXZ9T4UDEHa0yUSeKFj7XF9SZsS2yGkZgacJtLtAen-Ayeq_62VFbM4Xw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/v0/reserva/d8decbe5-3445-4388-9040-01d5f9b839d9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0",
+										"reserva",
+										"d8decbe5-3445-4388-9040-01d5f9b839d9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE reserva",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI0NDZjZTdmNy1iZDljLTQ2ZDAtYTZmNy0zYjQwYTg4NjE5ZDQiLCJzdWIiOiJwYWJsbzc0Z25kTkY4c25mZkEzbjNBQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlVTRVIiXSwiaWF0IjoxNjQ5NzQ4MDAxLCJleHAiOjE2NDk3NTE2MDF9.P5sb_YpaursAo9cjl9hicAS7qA015jHPue1Fh0poYB5nODkkQay65sxGW1ynRLdXPkq5DsFXAFGf7Edk-kMJ2g",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/v0/reserva/537e9d1b-bb99-466b-ac7b-8fae999ef69d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0",
+										"reserva",
+										"537e9d1b-bb99-466b-ac7b-8fae999ef69d"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Empresa ADMIN",
+			"item": [
+				{
+					"name": "Mail",
+					"item": [
+						{
+							"name": "GET mails",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwN2QzOWQzYy05OTQ5LTRlMWEtYmM4Ny0wNzY5MjYyZjE1YjciLCJzdWIiOiJhZG1pbkBhZG1pbmJ1cy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY0OTc0Nzk2NSwiZXhwIjoxNjQ5NzUxNTY1fQ.-ux41A_BKfO11iTw_Hd3eAm5lV8rTaXZ9T4UDEHa0yUSeKFj7XF9SZsS2yGkZgacJtLtAen-Ayeq_62VFbM4Xw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/v0-empresa/mail",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0-empresa",
+										"mail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET mail BY ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwN2QzOWQzYy05OTQ5LTRlMWEtYmM4Ny0wNzY5MjYyZjE1YjciLCJzdWIiOiJhZG1pbkBhZG1pbmJ1cy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY0OTc0Nzk2NSwiZXhwIjoxNjQ5NzUxNTY1fQ.-ux41A_BKfO11iTw_Hd3eAm5lV8rTaXZ9T4UDEHa0yUSeKFj7XF9SZsS2yGkZgacJtLtAen-Ayeq_62VFbM4Xw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/v0-empresa/mail/d578e350-847a-4836-90f3-49c724ff4d60",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0-empresa",
+										"mail",
+										"d578e350-847a-4836-90f3-49c724ff4d60"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET mail BY DepartureAndArrival",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwN2QzOWQzYy05OTQ5LTRlMWEtYmM4Ny0wNzY5MjYyZjE1YjciLCJzdWIiOiJhZG1pbkBhZG1pbmJ1cy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY0OTc0Nzk2NSwiZXhwIjoxNjQ5NzUxNTY1fQ.-ux41A_BKfO11iTw_Hd3eAm5lV8rTaXZ9T4UDEHa0yUSeKFj7XF9SZsS2yGkZgacJtLtAen-Ayeq_62VFbM4Xw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/v0-empresa/mail/details?departure=BILB&arrival=BCN SANTS",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0-empresa",
+										"mail",
+										"details"
+									],
+									"query": [
+										{
+											"key": "departure",
+											"value": "BILB"
+										},
+										{
+											"key": "arrival",
+											"value": "BCN SANTS"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Reserva",
+					"item": [
+						{
+							"name": "GET reservas",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI4MzMyMjQwZi1iZTVhLTQxMmItOWEwMS1kMmIzYTkyZTA4N2MiLCJzdWIiOiJhZG1pbmlzdHJhZG9yQGFkbWluaXN0cmFkb3IuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE2NTI3NzE4MDMsImV4cCI6MTY1Mjc3NTQwM30.HEvRnRzXdizs3Vt7BNhMbQ7kDLMLeyjjR-w2Dem-De8OobiK3gNbSVo1upOew8zBUA80ji_-CRRtffOtYBZo9w",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/v0-empresa/reserva",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"v0-empresa",
+										"reserva"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "GET client BY EMAIL",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwN2QzOWQzYy05OTQ5LTRlMWEtYmM4Ny0wNzY5MjYyZjE1YjciLCJzdWIiOiJhZG1pbkBhZG1pbmJ1cy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY0OTc0Nzk2NSwiZXhwIjoxNjQ5NzUxNTY1fQ.-ux41A_BKfO11iTw_Hd3eAm5lV8rTaXZ9T4UDEHa0yUSeKFj7XF9SZsS2yGkZgacJtLtAen-Ayeq_62VFbM4Xw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/v0-empresa/client/juana@jotas.local/email",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0-empresa",
+										"client",
+										"juana@jotas.local",
+										"email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET clients",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwN2QzOWQzYy05OTQ5LTRlMWEtYmM4Ny0wNzY5MjYyZjE1YjciLCJzdWIiOiJhZG1pbkBhZG1pbmJ1cy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY0OTc0Nzk2NSwiZXhwIjoxNjQ5NzUxNTY1fQ.-ux41A_BKfO11iTw_Hd3eAm5lV8rTaXZ9T4UDEHa0yUSeKFj7XF9SZsS2yGkZgacJtLtAen-Ayeq_62VFbM4Xw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/v0-empresa/client",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0-empresa",
+										"client"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trip",
+					"item": [
+						{
+							"name": "CREATE trip",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwN2QzOWQzYy05OTQ5LTRlMWEtYmM4Ny0wNzY5MjYyZjE1YjciLCJzdWIiOiJhZG1pbkBhZG1pbmJ1cy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY0OTc0Nzk2NSwiZXhwIjoxNjQ5NzUxNTY1fQ.-ux41A_BKfO11iTw_Hd3eAm5lV8rTaXZ9T4UDEHa0yUSeKFj7XF9SZsS2yGkZgacJtLtAen-Ayeq_62VFbM4Xw",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"date\": \"2022-04-02T20:30:00.000+00:00\",\r\n   \"departure\": \"BILB\", \r\n   \"arrival\": \"BCN SANTS\",\r\n   \"issue\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v0-empresa/trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0-empresa",
+										"trip"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET trips",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwN2QzOWQzYy05OTQ5LTRlMWEtYmM4Ny0wNzY5MjYyZjE1YjciLCJzdWIiOiJhZG1pbkBhZG1pbmJ1cy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY0OTc0Nzk2NSwiZXhwIjoxNjQ5NzUxNTY1fQ.-ux41A_BKfO11iTw_Hd3eAm5lV8rTaXZ9T4UDEHa0yUSeKFj7XF9SZsS2yGkZgacJtLtAen-Ayeq_62VFbM4Xw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/v0-empresa/trip",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0-empresa",
+										"trip"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE trip",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwN2QzOWQzYy05OTQ5LTRlMWEtYmM4Ny0wNzY5MjYyZjE1YjciLCJzdWIiOiJhZG1pbkBhZG1pbmJ1cy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY0OTc0Nzk2NSwiZXhwIjoxNjQ5NzUxNTY1fQ.-ux41A_BKfO11iTw_Hd3eAm5lV8rTaXZ9T4UDEHa0yUSeKFj7XF9SZsS2yGkZgacJtLtAen-Ayeq_62VFbM4Xw",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"date\": \"2022-04-02T20:30:00.000+00:00\",\r\n        \"departure\": \"BILB\",\r\n        \"arrival\": \"BCN POMPEUFABRA\",\r\n        \"issue\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/v0-empresa/trip/f79e0707-52a2-4818-a67f-3abb466eb17d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0-empresa",
+										"trip",
+										"f79e0707-52a2-4818-a67f-3abb466eb17d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE trip",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIwN2QzOWQzYy05OTQ5LTRlMWEtYmM4Ny0wNzY5MjYyZjE1YjciLCJzdWIiOiJhZG1pbkBhZG1pbmJ1cy5sb2NhbCIsImF1dGhvcml0aWVzIjpbIkFETUlOIl0sImlhdCI6MTY0OTc0Nzk2NSwiZXhwIjoxNjQ5NzUxNTY1fQ.-ux41A_BKfO11iTw_Hd3eAm5lV8rTaXZ9T4UDEHa0yUSeKFj7XF9SZsS2yGkZgacJtLtAen-Ayeq_62VFbM4Xw",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/v0-empresa/trip/f79e0707-52a2-4818-a67f-3abb466eb17d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"v0-empresa",
+										"trip",
+										"f79e0707-52a2-4818-a67f-3abb466eb17d"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
