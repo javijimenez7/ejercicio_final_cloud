@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d2ec7fc-cda1-4a7a-bdb5-36611c0a93a8" name="Changes" comment="">
+    <list default="true" id="1d2ec7fc-cda1-4a7a-bdb5-36611c0a93a8" name="Changes" comment="Endpoint postman">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEmpresa/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backEmpresa/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +24,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VirtualTravel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\javier.jimenez\Desktop\concurso" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Docker-compose.yml.backempresa: Compose Deployment">
+  <component name="RunManager" selected="Docker.Docker-compose.yml: Compose Deployment">
+    <configuration name="Docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="Docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="Docker-compose.yml.backempresa: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -83,26 +92,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="Docker-compose.yml.zookeeper1: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="zookeeper1" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="Docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.Docker-compose.yml.backempresa: Compose Deployment" />
         <item itemvalue="Docker.Docker-compose.yml.backweb1: Compose Deployment" />
         <item itemvalue="Docker.Docker-compose.yml.backweb: Compose Deployment" />
         <item itemvalue="Docker.Docker-compose.yml.kafka1: Compose Deployment" />
-        <item itemvalue="Docker.Docker-compose.yml.zookeeper1: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>

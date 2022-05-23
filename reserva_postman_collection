@@ -60,11 +60,21 @@
 						{
 							"name": "Token User",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAxIiwic3ViIjoiYWRtaW5pc3RyYWRvckBhZG1pbmlzdHJhZG9yLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjUzMzE3MDc5LCJleHAiOjE2NTMzMjA2Nzl9.r-4Qsu3e8yYLs5xpE9p8hdvoqZcSNtxHBEy3I07fyXWRw3Xsg8EOxDdyMxiGX1IBXBrAopAnaDBAQzAuIngCfg",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [
 									{
 										"key": "email",
-										"value": "pablo74gndNF8snffA3n3A@gmail.com",
+										"value": "javijd23@gmail.com",
 										"type": "default"
 									},
 									{
@@ -74,7 +84,7 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/v0/login",
+									"raw": "http://localhost:8080/v0/login?",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -83,6 +93,12 @@
 									"path": [
 										"v0",
 										"login"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null
+										}
 									]
 								}
 							},
@@ -91,10 +107,20 @@
 						{
 							"name": "Verifica Token",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAxIiwic3ViIjoiYWRtaW5pc3RyYWRvckBhZG1pbmlzdHJhZG9yLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjUzMzE3MDc5LCJleHAiOjE2NTMzMjA2Nzl9.r-4Qsu3e8yYLs5xpE9p8hdvoqZcSNtxHBEy3I07fyXWRw3Xsg8EOxDdyMxiGX1IBXBrAopAnaDBAQzAuIngCfg",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8080/v0-empresa/token/Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI4NDYyMDhhMy0zMThlLTRjYmQtYTRjMi04OGJmYTMwNjQxYTgiLCJzdWIiOiJhZG1pbmlzdHJhZG9yQGFkbWluaXN0cmFkb3IuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE2NTI3ODMzNjYsImV4cCI6MTY1Mjc4Njk2Nn0.XHlmrK7wg6Ic6ugDKKyCOXFNE-MTVfxSKVrPKnrtKsvALbjT59Dpl9oaZngkCycdLkdR-YXEmBRvfjbuxCcJIw",
+									"raw": "http://localhost:8080/v0-empresa/token/Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAxIiwic3ViIjoiYWRtaW5pc3RyYWRvckBhZG1pbmlzdHJhZG9yLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjUzMzE3MDc5LCJleHAiOjE2NTMzMjA2Nzl9.r-4Qsu3e8yYLs5xpE9p8hdvoqZcSNtxHBEy3I07fyXWRw3Xsg8EOxDdyMxiGX1IBXBrAopAnaDBAQzAuIngCfg",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -103,7 +129,7 @@
 									"path": [
 										"v0-empresa",
 										"token",
-										"Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI4NDYyMDhhMy0zMThlLTRjYmQtYTRjMi04OGJmYTMwNjQxYTgiLCJzdWIiOiJhZG1pbmlzdHJhZG9yQGFkbWluaXN0cmFkb3IuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE2NTI3ODMzNjYsImV4cCI6MTY1Mjc4Njk2Nn0.XHlmrK7wg6Ic6ugDKKyCOXFNE-MTVfxSKVrPKnrtKsvALbjT59Dpl9oaZngkCycdLkdR-YXEmBRvfjbuxCcJIw"
+										"Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAxIiwic3ViIjoiYWRtaW5pc3RyYWRvckBhZG1pbmlzdHJhZG9yLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjUzMzE3MDc5LCJleHAiOjE2NTMzMjA2Nzl9.r-4Qsu3e8yYLs5xpE9p8hdvoqZcSNtxHBEy3I07fyXWRw3Xsg8EOxDdyMxiGX1IBXBrAopAnaDBAQzAuIngCfg"
 									]
 								}
 							},
@@ -126,7 +152,7 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/v0/trip/e40ed3b5-878f-4705-95b2-053958506ced",
+									"raw": "http://localhost:8080/v0/trip/TRIP0001",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -135,7 +161,7 @@
 									"path": [
 										"v0",
 										"trip",
-										"e40ed3b5-878f-4705-95b2-053958506ced"
+										"TRIP0001"
 									]
 								}
 							},
@@ -210,6 +236,16 @@
 						{
 							"name": "CREATE reserva",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAyIiwic3ViIjoiamF2aWpkMjNAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTY1MzMxNzI2OCwiZXhwIjoxNjUzMzIwODY4fQ.g9V0AzYYm1DsF0ajMFtcj0wETFzcsZ01X2WNSDXY28MBTIWm5gd0adJLpI8yLr4swfeoigr6EuhW0D8xHg3PVQ",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -220,7 +256,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"details\": \"hola\",\r\n    \"idClient\": \"446ce7f7-bd9c-46d0-a6f7-3b40a88619d4\",\r\n    \"idTrip\": \"f79e0707-52a2-4818-a67f-3abb466eb17d\"\r\n}",
+									"raw": "{\r\n    \"details\": \"VIAJE JAEN MALAGA\",\r\n    \"idClient\": \"CLI0002\",\r\n    \"idTrip\": \"TRIP0001\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -228,7 +264,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/v0/ticket",
+									"raw": "http://localhost:8080/v0/reserva",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -236,7 +272,7 @@
 									"port": "8080",
 									"path": [
 										"v0",
-										"ticket"
+										"reserva"
 									]
 								}
 							},
@@ -250,7 +286,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJkMDgyMTEwNy0zMjY5LTQzNWItYTkyZi0wYjBiOWVlZDU2NzQiLCJzdWIiOiJqYXZpamQyM0BnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjUyNjk4NTE4LCJleHAiOjE2NTI3MDIxMTh9.-biVlJ7x6T_jGL5cH_AiUOQwUwJA4YBtoQHLGbMB3yI2_2xGaB5U3snWgsYOEywEhzLFOKvM-dwnCtYMc1w7sQ",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAyIiwic3ViIjoiamF2aWpkMjNAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTY1MzMxNzI2OCwiZXhwIjoxNjUzMzIwODY4fQ.g9V0AzYYm1DsF0ajMFtcj0wETFzcsZ01X2WNSDXY28MBTIWm5gd0adJLpI8yLr4swfeoigr6EuhW0D8xHg3PVQ",
 											"type": "string"
 										}
 									]
@@ -264,7 +300,7 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/v0/reserva/d8decbe5-3445-4388-9040-01d5f9b839d9",
+									"raw": "http://localhost:8080/v0/reserva/RESERVA0001",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -273,7 +309,7 @@
 									"path": [
 										"v0",
 										"reserva",
-										"d8decbe5-3445-4388-9040-01d5f9b839d9"
+										"RESERVA0001"
 									]
 								}
 							},
@@ -319,6 +355,16 @@
 						{
 							"name": "GET mails",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAxIiwic3ViIjoiYWRtaW5pc3RyYWRvckBhZG1pbmlzdHJhZG9yLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjUzMzE3MTAzLCJleHAiOjE2NTMzMjA3MDN9.cb1xUELlapicpvJ1ZJppKY1vXRSWemHEOaUbDAH_FGo5vT61aeAydaxIz50nPYzVVvgwgOP1dpmdOLaAy5L48Q",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -345,6 +391,16 @@
 						{
 							"name": "GET mail BY ID",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAxIiwic3ViIjoiYWRtaW5pc3RyYWRvckBhZG1pbmlzdHJhZG9yLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjUzMzE3MTAzLCJleHAiOjE2NTMzMjA3MDN9.cb1xUELlapicpvJ1ZJppKY1vXRSWemHEOaUbDAH_FGo5vT61aeAydaxIz50nPYzVVvgwgOP1dpmdOLaAy5L48Q",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -354,7 +410,7 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/v0-empresa/mail/d578e350-847a-4836-90f3-49c724ff4d60",
+									"raw": "http://localhost:8080/v0-empresa/mail/MAIL0001",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -363,7 +419,7 @@
 									"path": [
 										"v0-empresa",
 										"mail",
-										"d578e350-847a-4836-90f3-49c724ff4d60"
+										"MAIL0001"
 									]
 								}
 							},
@@ -419,7 +475,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI4MzMyMjQwZi1iZTVhLTQxMmItOWEwMS1kMmIzYTkyZTA4N2MiLCJzdWIiOiJhZG1pbmlzdHJhZG9yQGFkbWluaXN0cmFkb3IuY29tIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE2NTI3NzE4MDMsImV4cCI6MTY1Mjc3NTQwM30.HEvRnRzXdizs3Vt7BNhMbQ7kDLMLeyjjR-w2Dem-De8OobiK3gNbSVo1upOew8zBUA80ji_-CRRtffOtYBZo9w",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAxIiwic3ViIjoiYWRtaW5pc3RyYWRvckBhZG1pbmlzdHJhZG9yLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjUzMzE3MTAzLCJleHAiOjE2NTMzMjA3MDN9.cb1xUELlapicpvJ1ZJppKY1vXRSWemHEOaUbDAH_FGo5vT61aeAydaxIz50nPYzVVvgwgOP1dpmdOLaAy5L48Q",
 											"type": "string"
 										}
 									]
@@ -449,6 +505,16 @@
 						{
 							"name": "GET client BY EMAIL",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAxIiwic3ViIjoiYWRtaW5pc3RyYWRvckBhZG1pbmlzdHJhZG9yLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjUzMzE3MTAzLCJleHAiOjE2NTMzMjA3MDN9.cb1xUELlapicpvJ1ZJppKY1vXRSWemHEOaUbDAH_FGo5vT61aeAydaxIz50nPYzVVvgwgOP1dpmdOLaAy5L48Q",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -458,7 +524,7 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/v0-empresa/client/juana@jotas.local/email",
+									"raw": "http://localhost:8080/v0-empresa/client/javijd23@gmail.com",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -467,8 +533,7 @@
 									"path": [
 										"v0-empresa",
 										"client",
-										"juana@jotas.local",
-										"email"
+										"javijd23@gmail.com"
 									]
 								}
 							},
@@ -477,6 +542,16 @@
 						{
 							"name": "GET clients",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAxIiwic3ViIjoiYWRtaW5pc3RyYWRvckBhZG1pbmlzdHJhZG9yLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjUzMzE3MTAzLCJleHAiOjE2NTMzMjA3MDN9.cb1xUELlapicpvJ1ZJppKY1vXRSWemHEOaUbDAH_FGo5vT61aeAydaxIz50nPYzVVvgwgOP1dpmdOLaAy5L48Q",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -508,6 +583,16 @@
 						{
 							"name": "CREATE trip",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAxIiwic3ViIjoiYWRtaW5pc3RyYWRvckBhZG1pbmlzdHJhZG9yLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjUzMzE3MTAzLCJleHAiOjE2NTMzMjA3MDN9.cb1xUELlapicpvJ1ZJppKY1vXRSWemHEOaUbDAH_FGo5vT61aeAydaxIz50nPYzVVvgwgOP1dpmdOLaAy5L48Q",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -518,7 +603,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n   \"date\": \"2022-04-02T20:30:00.000+00:00\",\r\n   \"departure\": \"BILB\", \r\n   \"arrival\": \"BCN SANTS\",\r\n   \"issue\": false\r\n}",
+									"raw": "{\r\n   \"date\": \"2022-04-02T20:30:00.000+00:00\",\r\n   \"departure\": \"JAEN\", \r\n   \"arrival\": \"MALAGA\",\r\n   \"issue\": false\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -543,6 +628,16 @@
 						{
 							"name": "GET trips",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJDTEkwMDAxIiwic3ViIjoiYWRtaW5pc3RyYWRvckBhZG1pbmlzdHJhZG9yLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjUzMzE3MTAzLCJleHAiOjE2NTMzMjA3MDN9.cb1xUELlapicpvJ1ZJppKY1vXRSWemHEOaUbDAH_FGo5vT61aeAydaxIz50nPYzVVvgwgOP1dpmdOLaAy5L48Q",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [
 									{
