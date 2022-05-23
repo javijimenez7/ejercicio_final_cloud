@@ -47,7 +47,7 @@ Una vez descargado, procederemos a probar la aplicación con Postman con una col
 
 * Trip
   - (GET) http://localhost:8080/v0/trip/{id} : filtra trip por id
-  - (GET) http://localhost:8080/v0/trip/details?departure=JAEN&arrival=MALAGA&date=2022-04-09T20:30:00.000Z : filtra trip por salida y llegada
+  - (GET) http://localhost:8080/v0/trip/details?departure=JAEN&arrival=MALAGA&date=2022-04-09T20:30:00.000Z : filtra trip por salida y llegada ( parametro "date" y "arrival" optativos )
   - (GET) http://localhost:8080/v0/trip/disponible/GRANADA : asientos disponibles para un destino
 
 #### Con autenticación
