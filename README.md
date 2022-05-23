@@ -4,6 +4,7 @@ Este ejercicio servirá para aplicar los conocimientos adquiridos en la formaci�
 
 - Descripcion
 - Tecnologias utilizadas
+- Servicios
 - Instalación
 - Funcionamiento
 
@@ -23,6 +24,15 @@ Estas son las tecnologías usadas para la realización de esta aplicación
 - [Kafka](https://kafka.apache.org/) - Permite realizar la comunicación asíncrona entre las dos aplicaciones
 - [Docker](https://www.docker.com/) - Exportar la aplicacion y gestionar todos los servicios
 
+## Servicios
+
+
+| Servicio | Puerto |
+| ------------- | ------------- |
+| backWeb  | 8001 |
+| backWeb1  | 8002 |
+| backEmpresa  | 8090 |
+| busBalancer  | 8080 |
 
 ## Instalación
 
